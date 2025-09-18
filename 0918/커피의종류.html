@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+.cbox{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    overflow: hidden;
+    padding-bottom:0;
+}
+.cbox h1{
+    text-align: center;
+    padding: 10px;}
+.cbox h2{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.box{
+    float: left;
+    width: 550px;
+    height: 170px;
+    border: 1px solid #333;
+    margin-left: 32px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+.box h3{text-align: left; margin: 0; padding: 10px; font-size: 12px;
+}
+.box p{text-align: left; margin: 0; padding: 10px;}
+.sbox_left{
+    width: 250px;
+    height: 167px;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #333;
+}
+.sbox_right{
+    width: 250px;
+    height: 167px;
+    float: left;
+    margin-left: 15px;
+    font-size: 12px;
+    border: 1px solid #333;
+}
+.sl_1{
+    background: url(images/왕메가헛개리카노.jpg) no-repeat 50% 50% / contain;
+}
+.sl_2{
+    background: url(images/할메가미숫커피.jpg) no-repeat 50% 50% / contain;
+}
+.sl_3{
+    background: url(images/라이트_바닐라-아몬드라떼.jpg) no-repeat 50% 50% / contain;
+}
+.sr_1, .sr_2, .sr_3{
+    /* overflow: hidden; 넘치는 글씨는 숨겨라 */
+    /* overflow: scroll; z,y에 스크롤이 무조건 생김 */
+    overflow: auto;
+}
+</style>
+</head>
+<body>
+<div class="cbox">
+    <h1>커피의 종류</h1>
+    <div class="box box1">
+        <div class="sbox_left sl_1"></div>
+        <div class="sbox_right sr_1">
+            <h2>왕메가헛개리카노</h2>
+            <h3>BIG MEGA Oriental Raisin-Tea Americano</h3>
+            <p>
+             국내산 헛개수와 아메리카노를 블렌딩해 고소한 맛이 더욱 커진 왕메가사이즈 커피
+            </p>
+        </div>
+    </div>
+    <div class="box box2">
+        <div class="sbox_left sl_2"></div>
+        <div class="sbox_right sr_2">
+            <h2>할메가미숫커피</h2>
+            <h3>MEGA MGC Mix Coffee Blend with Grain Powder</h3>
+            <p>
+             곡물의 향이 고소한 미숫가루와 달달한 믹스커피의 황금비율 조합
+            </p>
+    </div>
+    </div>
+    <div class="box box3">
+        <div class="sbox_left sl_3"></div>
+        <div class="sbox_right sr_3">
+            <h2>라이트_바닐라-아몬드라떼</h2>
+            <h3>Light vanilla almond latte</h3>
+            <p>
+            비건 음료 아몬드브리즈와 칼로리를 낮춘 라이트 바닐라 시럽이 만나 가볍지만 부드~러워진 라떼 
+            </p>
+        </div>
+     </div>
+</div>
+</body>
+</html>

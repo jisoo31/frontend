@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+.section1{
+     width: 1000px;
+     height: 300px;
+     margin: 0 auto;
+     padding: 30px 0;
+     border: 1px solid #333;
+}
+.section2{
+     width: 1000px;
+     height: 150px;
+     margin: 0 auto;
+     padding: 30px 0;
+     border: 1px solid #333;
+}
+
+.section1 .bigbox li{
+    float: left;
+    width: 300px;
+    height: 200px;
+    padding: 20px 30px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+.section2 .bigbox2 li{
+    float: left;
+    width: 200px;
+    height: 150px;
+    padding: 30px 30px 0 0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    margin-right: -15px;
+}
+.section1 .bigbox li:last-child{
+    margin-right: 0;
+    /* 1,2번은 마진 50씩 들어감 마지막은 마진 0으로 선에 붙음 */
+}
+.txt1 span{
+    display: inline-block;
+    /* 인라인블럭은 줄바뀜 없이 넓이 높이 부여하려고 사용 */
+    padding: 7px;
+    background-color: cadetblue;
+    color: #fff;
+}
+.section2 ul li h4{
+    color: #333;
+}
+.icon{
+    width: 100px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    margin-right: 50;
+    color: #333;
+}
+</style>
+</head>
+<body>
+    <section class="section1">
+        <ul class="bigbox">
+            <li>
+                <div>
+                    <p class="txt1"><span>추천상품</span></p>
+                    <h3 class="txt2">건강한 자산관리 KB마이네이터</h3>
+                    <p class="txt3">높은 이율 ! 수수료 혜택 ! <br/>목적별 자금관리를 통장 하나로 !</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="txt1"><span>서비스</span></p>
+                    <h3 class="txt2">KB마이핏통장</h3>
+                    <p class="txt3">각 기관에 흩어진 나의 자산을<br/>한 곳에 모아서 관리해보세요</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="txt1"><span>서비스</span></p>
+                    <h3 class="txt2">이동통신사서비스 Liiv M</h3>
+                    <p class="txt3">KB국민은행의 혁신금융서비스로<br/>금융권 최초로 제공하는 이동통신서비스</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="section2">
+        <ul class="bigbox2">
+            <li>
+                <h2 class="txt4">금융상품</h2>
+                <h4>바로가기 ></h4>
+            </li>
+        </ul>
+    <div class="icon icon1">
+       <img src="imgs/예금.png" alt="#">
+       <h4>예금</h4>
+    </div>
+    <div class="icon icon2">
+       <img src="imgs/펀드.png" alt="#">
+       <h4>펀드</h4>
+    </div>
+    <div class="icon icon3">
+       <img src="imgs/대출.png" alt="#">
+       <h4>대출</h4>
+    </div>
+    <div class="icon icon4">
+       <img src="imgs/신탁.png" alt="#">
+       <h4>신탁</h4>
+    </div> 
+    <div class="icon icon5">
+       <img src="imgs/isa.png" alt="#">
+       <h4>ISA</h4>
+    </div>
+    <div class="icon icon6">
+       <img src="imgs/보험공제.png" alt="#">
+       <h4>보험/공제</h4>
+    </div>
+    <div class="icon icon7">
+       <img src="imgs/골드.png" alt="#">
+       <h4>골드</h4>
+    </div>
+    <div class="icon icon8">
+       <img src="imgs/외화예금.png" alt="#">
+       <h4>외화예금</h4>
+    </div>
+    </section>
+</body>
+</html>

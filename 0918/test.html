@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+    *{margin: 0; padding: 0;}
+    ul,li{list-style: none;}
+    a{text-decoration: none;color: #666;}
+    body{
+        font-family: "Nanum Gothic", sans-serif;
+        color: #666;
+    }
+    #wrap{
+        width: 1000px;
+        height: 650px;
+        margin: 0 auto;
+    }
+    #logo {
+        float: left;
+        width: 180px;
+        height: 650px;
+        background-color: pink;
+        text-align: center;
+        padding-top: 20px;
+        box-sizing: border-box;
+    }
+    #logo .logo{
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: black;
+    }
+    .one{
+        border: 1px solid black;
+        padding: 0;
+        margin: 0 auto;
+        width: 165px;
+        box-sizing: border-box;
+
+    }
+     .one > li{
+        float: none;
+        margin: 0px
+    }
+    .one li a{
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .one li ul{
+        display: none;
+        position: absolute;
+    }
+    #slider{
+        height: 350px;
+        width: 1000px;
+        background-color: yellow;
+    }
+    #contents{
+        width: 1000px;
+        height: 200px;
+        background-color: #ccc;
+    }
+    #contents > div{
+        float: left;
+        width: 273px;
+        height: 200px;
+    }
+
+.notice{
+    background-color: rgb(216, 216, 216);
+}
+.banner{
+    background-color: rgb(205, 205, 205);
+}
+.icons{
+    background-color: rgb(171, 171, 171);
+}
+footer{
+    width: 1000px;
+    height: 100px;
+    background-color: aqua;
+}
+footer>div{float: left;}
+footer .f_logo{width: 180px;height: 100px; background-color: rgb(132, 132, 132); float: left;}
+footer .f_menu{width: 640px;height: 50px; background-color: rgb(100, 100, 100);}
+footer .f_copy{width: 640px;height: 50px; background-color: rgb(49, 49, 49);}
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo">
+                <h1 class="logo">LOGO</h1>
+                <ul class="one">
+                    <li><a href="#">MENU-1</a></li>
+                    <li><a href="#">MENU-2</a></li>
+                    <li><a href="#">MENU-3</a></li>
+                    <li><a href="#">MENU-4</a></li>
+                </ul>            
+            </div>
+        </header> 
+        <div id="slider">
+        </div>
+        <div id="contents">
+            <div class="notice"></div>
+            <div class="banner"></div>
+            <div class="icons"></div>
+        </div>
+        <footer>
+            <div class="f_logo"></div>
+            <div class="f_menu"></div>
+            <div class="f_copy"></div>
+        </footer>
+    </div>
+</body>
+</html>

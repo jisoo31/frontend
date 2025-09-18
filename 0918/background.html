@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+.header1{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+}
+.header2{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+    /* background-repeat: np-repest; 1개만나옴 */
+    background-repeat: repeat-x;
+}
+.header3{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+    background-repeat: no-repeat;
+    /* background-repeat: np-repest; 1개만나옴 */
+    background-position: 100px 50px;
+    /* background-position: 100% 50%; 오른쪽 중앙 */
+}
+.header4{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/cw1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* contain 영역에 사진 채우기 이미지가 잘리지 않음 */
+}
+.header5{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/cw1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    /* cover 꽉채울떄 사용 영역에 맞게 이미지 잘림 *중요* */
+}
+.header6{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background: url(images/cw1.jpg) no-repeat 50% 50% / cover;
+}
+
+</style>
+</head>
+<body>
+    <div class="header1">
+       헤더
+    </div> 
+     <div class="header2">
+       헤더2
+    </div>  <div class="header3">
+       헤더3
+    </div> 
+    </div>  <div class="header4">
+       헤더4
+    </div> 
+    </div>  <div class="header5">
+       헤더5
+    </div>
+    </div>  <div class="header6">
+       헤더6
+    </div>  
+</body>
+</html>
