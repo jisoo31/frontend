@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{margin: 0; padding: 0;}
+
+.contents{
+    width: 100%;
+    height: 630px;
+}
+
+.section1{
+    width: 1440px;
+    height: 630px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top {
+    padding: 10px;
+}
+
+.tatle{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #333;
+}
+
+.section1 .top .txt1{
+    font-size: 14px;
+}
+
+.center{
+     width: 1040px;
+     height: 320px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.center .box{
+    float: left;
+    border: 1px solid #333;
+    width: 200px;
+    height: 275px;
+    padding: 20px;
+    margin-right: 15px; 
+}
+
+.center .box img{
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+}
+
+.center .box span {
+    display: inline-block; /* span은 원래 인라인이므로 크기 지정 위해 block화 */
+    width: 30px;           /* 가로 */
+    height: 30px;          /* 세로 (가로랑 같게 해야 원형) */
+    line-height: 30px;     /* 세로 가운데 정렬 */
+    border-radius: 50%;    /* 원형 */
+    background-color: rgb(0, 62, 115); /* 배경색 */
+    color: #fff;           /* 글자색 */
+    text-align: center;
+    font-size: 12px;    /* 가로 가운데 정렬 */
+}
+
+.center .box .text{
+    font-size: 12px;
+    color: #333;
+}
+
+.txt2{
+    margin: 15px auto 10px;
+    color:rgb(0, 62, 115) ;    
+}
+
+.bottom{
+    margin: 20px auto ;
+    font-size: 15px;
+    color: rgb(0, 62, 115);
+}
+ 
+footer a{
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(0, 62, 115);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <section class="section1">
+                <div class="top">
+                    <h1 class="tatle">
+                        Franchise
+                    </h1>
+                    <p class="txt1">
+                        브랜드 창업을 검토하실 때 꼭 필요합니다.
+                    </p>
+                </div>
+                <div class="center">
+                    <div class="box box1">
+                        <img src="imgs/franchise_ico1.png" alt="">
+                        <p><span class="c1">1</span></p>
+                        <h4 class="txt2">
+                            창업설명회 & 개별상담    
+                        </h4>
+                        <p class="text">가맹지원서 및 상권조사표 작성</p>
+                    </div>
+                    <div class="box box2">
+                        <img src="imgs/franchise_ico2.png" alt="">
+                        <p><span class="c2">2</span></p>
+                        <h4 class="txt2">
+                            타겟 입지    
+                        </h4>
+                        <p class="text">브랜드는 주로 메인상권</br>지역에 개설됩니다.</p>
+                    </div>
+                    <div class="box box3">
+                        <img src="imgs/franchise_ico3.png" alt="">
+                        <p><span class="c3">3</span></p>
+                        <h4 class="txt2">
+                            필요 면적   
+                        </h4>
+                        <p class="text">브랜드는 지상 1층,</br>전용면적 최소 50m<sup>2</sup>(15PY)/</br>지상2층, 전용면적 최소 66m<sup>2</sup>(20PY)의</br>공간이 필요합니다.</p>
+                    </div>
+                    <div class="box box4">
+                        <img src="imgs/franchise_ico4.png" alt="">
+                        <p><span class="c4">4</span></p>
+                        <h4 class="txt2">
+                            창업 가능 지역    
+                        </h4>
+                        <p class="text">전국 상권 진행 가능(제주 제외),</br>상권 상담은 창업문의에 남겨주세요.</p>
+                    </div>
+                </div>
+                <footer>
+                    <p class="bottom">본사와 가맹점주가 상생할 수 있는</br>지속성 있는<b> 브랜드의 개발과 경영방침</b>을 추구합니다.</p>
+                    <p><a href="">창업설명회 신청/문의</a></p>
+                </footer>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

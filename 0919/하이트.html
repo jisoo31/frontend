@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+.wrap{
+    position: relative;
+    width: 1070px;
+    height: 800px; 
+    border: 1px solid #fff;
+    margin: 100px auto 0;
+}
+
+.box{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    display: none;
+}
+
+.box img{
+    display: block;
+    width: 100%;
+}
+
+.box1{
+    display: block;
+    left: 0;
+    top: 0;
+}
+.box2{
+    width: 260px;
+    height: 530px;
+    display: block;
+    left: 270px;top: 0px;
+}
+.box3{
+    display: block;
+    right: 270px;
+    top: 0;
+}
+.box4{
+    display: block;
+   right: 0;
+    top: 0;
+}
+.box5{
+    display: block;
+    left: 0;
+    top: 270px;
+}
+.box6{
+    width: 530px;
+    height: 260px;
+    display: block;
+    right: 0;
+    bottom: 270px;
+}
+.box7{
+    display: block;
+    left: 0;
+    bottom: 0;
+}
+.box8{
+    width: 530px;
+    height: 260px;
+    display: block;
+    right: 270px;
+    bottom: 0;
+}
+.box9{
+    display: block;
+   right: 0;
+    bottom: 0;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0; 
+    top: 0;
+    background-color: rgba(39, 85, 212, 0.9);
+    transition: all 0.2s;
+}
+.box:hover:after{width: 100%;}
+
+.box6::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0; 
+    top: 0;
+    background-color: rgba(39, 85, 212, 0.9);
+    transition: all 0.2s;
+}
+.box:hover:after{height: 100%;}
+
+.box8::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0; 
+    top: 0;
+    background-color: rgba(39, 85, 212, 0.9);
+    transition: all 0.2s;
+}
+.box:hover:after{height: 100%;}
+
+.box p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; 
+    top: 0;
+    box-sizing: border-box;
+    padding-top: 75px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    z-index: 10;
+    transition: all 0.2s;
+    opacity: 0;
+    /* 불투명도 0 안보임 */
+    background: url(images/more.png) no-repeat 50% 70%;
+}
+.box2 p{
+    padding-top: 200px;
+    background: url(images/more.png) no-repeat 50% 58%;
+}
+.box3 p{
+    padding-top: 80px;
+    background: url(images/more.png) no-repeat 50% 63%;
+}
+.box4 p{
+    padding-top: 80px;
+    background: url(images/more.png) no-repeat 50% 63%;
+}
+.box6 p{
+    padding-top: 80px;
+    background: url(images/more.png) no-repeat 50% 63%;
+}
+.box7 p{
+    padding-top: 80px;
+    background: url(images/more.png) no-repeat 50% 63%;
+}
+.box8 p{
+    padding-top: 95px;
+    background: url(images/more.png) no-repeat 50% 58%;
+}
+.box9 p{
+    padding-top: 80px;
+    background: url(images/more.png) no-repeat 50% 63%;
+}
+.box:hover p{opacity: 1;}
+</style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="box box1">
+            <img src="images/01.png" alt="">
+            <p>국내유일 청정 대나무숯으로</br>5번 걸러 더 깨끗해진</br>참이슬 fresh</p>
+        </div>
+        <div class="box box2">
+            <img src="images/02.jpg" alt="">
+            <p>청정라거</br>시대개막</br>TERRA</p>
+        </div>
+        <div class="box box3">
+            <img src="images/03.jpg" alt="">
+            <p>언론 속 하이트진로의</br>다양한 소식을 알려 드립니다.</p>
+        </div>
+        <div class="box box4">
+            <img src="images/04.png" alt="">
+            <p>더블 숙성 공법이 만든 부드러우면서</br>강렬한 맛의 더블 임팩트 라거!</p>
+        </div>
+        <div class="box box5">
+            <img src="images/05.png" alt="">
+            <p>하이트진로의 사회공헌 활동은</br>모두가 즐겁고 행복한 세상을</br>만들기 위한 실천입니다.</p>
+        </div>
+        <div class="box box6">
+            <img src="images/06.png" alt="">
+            <p>대한민국 맥주의 자존심!</br>ALL NEW 하이트</p>
+        </div>
+        <div class="box box7">
+            <img src="images/07.png" alt="">
+            <p>부드러움의 황금비율</br>탄샌 '진로골드'</p>
+        </div>
+        <div class="box box8">
+            <img src="images/08.png" alt="">
+            <p>하이트진로의 최신 광고영상을 소개합니다.</p>
+        </div>
+        <div class="box box9">
+            <img src="images/09.jpg" alt="">
+            <p>하이트진로 100주년 기념</br>디지털 역사관입니다.</p>
+        </div>
+    </div>
+</body>
+</html>
