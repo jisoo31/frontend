@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style> 
+#myball{
+    position: relative;
+    height: 160px;
+    width: 116px;
+    background: url(img/bg-main1.png) no-repeat 50% 50%;
+    /* 애니메이션 이름 */
+    animation-name: myani;
+    /* 애니메이션 시간 */
+    animation-duration: 3s;
+    /* 애니메이션 반복 횟수 */
+    animation-iteration-count: infinite;
+    /* 대조되는 움직임을 줘서 왕복하는 것처럼 나옴 */
+    animation-direction: alternate;
+}
+@keyframes myani {
+    0%{top: 10px;}
+    100%{top: 600px;}
+    
+}
+</style>
+</head>
+<body>
+    <div id="img1"></div>
+    <div id="img2"></div>
+</body>
+</html>
