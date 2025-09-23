@@ -1,0 +1,107 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black;}
+
+#container{
+    width: 900px;
+    margin: auto;
+}
+
+header{
+    position: relative;
+    width: 900px;
+    height: 300px;
+    background: url(../coffe_images/top.jpg);
+}
+
+header h2{
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    color: #fff;
+    font-size: 35px;
+}
+
+nav{
+    width: 900px;
+    height: 100px;
+    background-color: #904d17;
+}
+
+nav ul li{
+    float: left;
+    margin-left: 40px;
+    margin: 20px 0;
+}
+
+nav ul li a{
+    display: block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin-left: 15px;
+}
+
+nav ul li:hover a{
+    background-color: #fff;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+}
+
+.main{
+    height: 550px;
+}
+
+section{
+    width: 600px;
+    height: 550px;
+    background-color: #9d9b9b;
+    float: left;
+}
+
+section h2{
+    text-align: center;
+    padding : 10px 0;
+}
+
+section article{
+    width: 255px;
+    height: 180px;
+    padding: 10px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #333;
+    margin: 0 0 15px 15px;
+    text-align: justify;
+}
+
+section article p{
+    font-size: 13px;
+}
+
+article h3{
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background: url(../coffe_images/kong.png) no-repeat 0% 30%;
+}
+
+aside{
+    width: 300px;
+    height: 550px;
+    background-color: #e87f39;
+    float: left;
+    text-align: center;
+    /* 사진도 중앙 정렬 됨 */
+}
+
+footer{
+    height: 70px;
+    background-color: #333;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+}
+

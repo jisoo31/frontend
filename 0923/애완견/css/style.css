@@ -1,0 +1,118 @@
+*{margin:0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+#wrapper{
+    width: 900px;
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    height: 200px;
+    background-color: #F46075;
+}
+
+header h1{
+    float: left;
+    margin-left: 50px;
+    margin-top: 70px;
+    color: #fff;
+}
+
+header .logo_p{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+/* 메뉴들이 들어갈 상자 */
+nav{
+    height: 60px;
+    background-color: #ccc;
+}
+
+nav ul li{
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+/* 메뉴가 좌우 너무 붙어 있으면 밑*/
+nav ul li a{
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+nav ul li:hover a{
+    background-color: #F46075;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.main{
+    height: 550px;
+}
+
+section{
+    width: 650px;
+    height: 550px;
+    background-color: skyblue;
+    float: left;
+}
+
+section h2{
+    text-align: center;
+    padding : 10px 0;
+}
+
+section article{
+    width: 280px;
+    height: 180px;
+    padding: 10px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #333;
+    margin: 0 0 15px 15px;
+    text-align: justify;
+    /* 문단 양쪽 정렬 */
+}
+
+section article p{
+    font-size: 13px;
+}
+
+article h3{
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background: url(../img/bg.png) no-repeat 0% 30%;
+}
+
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #ffffcc;
+    float: left;
+    text-align: center;
+    /* 사진도 중앙 정렬 됨 */
+}
+
+aside h2{
+    padding: 10px 0;
+}
+
+aside img{
+    padding-bottom: 10px;
+}
+
+footer{
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}

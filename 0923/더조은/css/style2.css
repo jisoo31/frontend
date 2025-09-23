@@ -1,0 +1,132 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{color: #000000; text-decoration: none;}
+
+#header_out{
+    width: 100%;
+    position: relative;
+    height: 250px; 
+    z-index: 5;
+    /* header 전체를 감싸는 header_out을 만든다 */
+}
+
+header{
+    width: 1200px;
+    height: 280px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+header .sns li{
+    float: left;
+    margin-left: 15px;
+}
+
+header .lnb li{
+    float: right;
+    margin-right: 15px;
+}
+
+.logo img{
+    width: 250px;
+    height: auto;
+
+}
+
+header .logo{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sns{
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.lnb{
+    float: right;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.main_menu{
+    position: absolute;
+    width: 100%;
+    top: 220px;
+    left: 0;
+}
+
+.main_menu> .gnb{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.main_menu>ul>li{
+    float: left;
+    text-align: center;
+}
+
+.main_menu ul li a{
+    display: block;
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: #fff;
+}
+
+.main_menu ul li ul{
+    background-color: #333;
+    position: absolute;
+    /* width: 240px; */
+    height: 0px;  
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.main_menu ul:hover li ul{
+    height: 180px;
+    padding: 10px 0;
+}
+
+header .lnb li{
+    float: left;
+    padding: 10px;
+    background: url(../images/bar.png) no-repeat 100% 50%;
+}
+.lnb li:last-child{
+    background: none;
+}
+
+.shadow{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #333;
+    height: 0px;
+    width: 100%;
+    transition: all 0.35s;
+}
+
+.main_menu:hover .shadow {
+    height: 180px;
+    border-bottom: 1px solid #333;
+}
+
+
+
+.main1 img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}

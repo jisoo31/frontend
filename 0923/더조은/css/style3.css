@@ -1,0 +1,106 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{color: #000; text-decoration: none;}
+#header_out{
+    position: relative;
+    width: 100%;
+    height: 250px; 
+    z-index: 5;
+}
+header{
+    position: relative;
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sns{
+    float: left;
+    margin-left: 15px;
+}
+.sns li{
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.lnb{
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.lnb li{
+    float: right;
+    padding: 0 10px;
+    background: url(../images/bar.png) no-repeat 100% 50%;
+}
+
+.lnb>li:first-child{
+    background: none;
+}
+
+.main_menu{
+    position: absolute;
+    width: 100%;
+    top: 220px;
+    left: 0;
+}
+
+.main_menu>.gnb{
+    width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 10;
+    margin-top: 30px;
+}
+
+.main_menu>ul>li{
+    float: left;
+    text-align: center;
+}
+
+.main_menu ul li a{
+    display: block;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ccc;
+}
+
+.main_menu .gnb li ul{
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.main_menu .gnb:hover li ul{
+    height: 200px;
+}
+
+.shadow{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    background-color: #9a3333;
+    height: 0px;
+    width: 100%;
+    transition: all 0.35s;
+    z-index: 1;
+}
+
+
+.main_menu:hover ~ .shadow{
+    width: 100%;
+    height: 230px;
+    border-bottom: 1px solid #ccc;
+}
