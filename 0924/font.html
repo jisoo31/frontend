@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* font-family 글꼴지정 font-size 글자크기 */
+/* 글자 사이즈는 기본 16px */
+/* font-weight: 글자굵기 font-style:italic, normal; */
+/* line height: 100%, 2.0, 32px; 보통 1.4~1.8 */
+body{
+    font-size: 20px;
+}
+.f1{
+    font-size: 1em;
+    /* 부모의 크기의 비례 */
+}
+.f2{
+    font-size: 1rem;
+    /* root(html)의 글자 크기에 비례 */
+}
+.f3{
+    font: italic16px/1.5 "Arial", sans-serif;
+    /* font style font-weight font-size line height font-family 순서*/
+}
+/* 
+text
+color:red; 색상
+text-aline
+p {text-align: left;}
+p {text-align: right;} 
+p {text-align: center;} 
+p {text-align: justify;}
+text-decoration
+text-decoration: none; 밑줄제거
+text-decoration: underline; 밑줄 생기기
+text-decoration: line-through; 취소선
+text-transform (대소문자)
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize; 첫글자만 대문자
+
+letter-spacing(글자간격)
+
+word-spacing(단어간격)
+text-indent(들여쓰기)
+*/
+
+.f4{letter-spacing: -2px;}
+.f5{text-indent: 10px;}
+
+/* white-space 공배처리
+white-space: nowrap; 줄바꿈 없이 한줄로
+white-space: pre; 공백, 줄바꿈 없이 그대로 유지
+white-space: nomal; 기본(자동 줄바꿈)
+ */
+
+*{margin: 0; padding: 0;}
+ header{
+    width: 1000px;
+    height: 300px; 
+    border: 1px solid #333;
+    position: relative;
+    margin: 0 auto;
+ }
+
+ header h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+ }
+</style>
+
+</head>
+<body>
+    <p class="f1">요즈음은 반응형웹이 대세이다.</p>
+    <p class="f2">요즈음은 반응형웹이 대세이다.</p>
+    <p class="f3">요즈음은 반응형웹이 대세이다.</p>
+    <p class="f4">요즈음은 반응형웹이 대세이다.</p>
+    <p class="f5">요즈음은 반응형웹이 대세이다.</p>
+    <p class="f6">요즈음은 반응형웹이 대세이다.</p>
+
+
+    <header>
+        <h1>안녕하세요 더조은 컴퓨터 학원입니다.</h1>
+    </header>
+</body>
+</html>

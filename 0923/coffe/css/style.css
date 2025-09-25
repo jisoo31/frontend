@@ -2,6 +2,259 @@
 ul{list-style: none;}
 a{text-decoration: none; color: black;}
 
+/* 스마트폰용 */
+@media screen and (max-width :600px){
+#container{
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    position: relative;
+    height: 250px;
+    background: url(../coffe_images/top.jpg);
+}
+
+header h2{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: #fff;
+    font-size: 28px;
+}
+
+nav{
+    /* width: 900px; */
+    height: 200px;
+    background-color: #904d17;
+}
+
+nav ul li{
+    float: left;
+    width: 50%;
+    height: 60px;
+}
+
+nav ul li a{
+    display: block;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin-left: 50px;
+}
+
+nav ul li:hover a{
+    background-color: #fff;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+}
+
+.main{
+    width: 100%;
+}
+
+section{
+    width:100%;
+    /* height: 550px; */
+    background-color: #9d9b9b;
+    padding-bottom: 20px;
+}
+
+section h2{
+    text-align: center;
+    padding : 10px 0;
+}
+
+section article{
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #333;
+    margin: 0 auto 15px;
+    text-align: justify;
+}
+
+section article p{
+    font-size: 13px;
+}
+
+article h3{
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background: url(../coffe_images/kong.png) no-repeat 0% 30%;
+}
+
+aside{
+    width: 100%;
+    height: auto;
+    background-color: #e87f39;
+    text-align: center;
+    /* 사진도 중앙 정렬 됨 */
+}
+
+aside h2{
+    padding: 10px 0;
+}
+
+aside img{
+    width: 60%;
+    padding-bottom: 10px;
+}
+
+footer{
+    height: 70px;
+    background-color: #333;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+}
+} 
+
+
+
+
+
+
+
+
+
+
+/* 스마트패드용 */
+@media screen and (min-width :601px) and (max-width :1023px) {
+
+#container{
+    width: 600px;
+    margin: auto;
+}
+
+header{
+    position: relative;
+    /* width: 900px; */
+    height: 270px;
+    background: url(../coffe_images/top.jpg);
+}
+
+header h2{
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    color: #fff;
+    font-size: 28px;
+}
+
+nav{
+    height: 200px;
+    background-color: #904d17;
+}
+
+nav ul li{
+    float: left;
+    margin: 20px 0;
+}
+
+nav ul li a{
+    display: block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    margin-left: 15px;
+}
+
+nav ul li:hover a{
+    background-color: #fff;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+}
+
+.main{
+    height: auto;
+}
+
+section{
+    width: 600px;
+    height: 550px;
+    background-color: #9d9b9b;
+}
+
+section h2{
+    text-align: center;
+    padding : 10px 0;
+}
+
+section article{
+    width: 240px;
+    height: 200px;
+    padding: 10px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #333;
+    margin: 0 0 15px 25px;
+    text-align: justify;
+}
+
+section article p{
+    font-size: 13px;
+}
+
+article h3{
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background: url(../coffe_images/kong.png) no-repeat 0% 30%;
+}
+
+aside{
+    width: 100%;
+    height: 170px;
+    background-color: #e87f39;
+    text-align: center;
+    /* 사진도 중앙 정렬 됨 */
+}
+
+
+aside img{
+    width: 180px;
+    height: 120px;
+    text-align: center;
+    margin-left: 15px;
+    float: left;
+}
+
+footer{
+    height: 70px;
+    background-color: #333;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* pc용 */
+@media screen and (min-width :1024px) {
 #container{
     width: 900px;
     margin: auto;
@@ -9,7 +262,7 @@ a{text-decoration: none; color: black;}
 
 header{
     position: relative;
-    width: 900px;
+    /* width: 900px; */
     height: 300px;
     background: url(../coffe_images/top.jpg);
 }
@@ -103,5 +356,11 @@ footer{
     color: #fff;
     line-height: 70px;
     text-align: center;
+}
+
+aside img{
+    width: 80%;
+    padding-bottom: 10px;
+}
 }
 
