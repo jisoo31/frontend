@@ -23,9 +23,9 @@ li{
 #banner{
     position: absolute;
     top: 200px;
-    width: 3800px;
+    width: 7600px;
     height: 300px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 p{
@@ -43,8 +43,8 @@ p{
     position: relative;
     width: 1200px;
     height: 500px;
-    border: 1px solid blue;
-    /* overflow: hidden; */
+    /* border: 1px solid blue; */
+    overflow: hidden;
 }
 </style>
 </head>
@@ -70,10 +70,10 @@ let listLi = document.querySelectorAll('#banner li'); //사진을 감싸는 li �
 let total = listLi.length; //5
 //let li_width = 1200;
 let li_width = document.querySelector('#banner>li').offsetWidth; //= 80 넓이 구하는 법
-// for(let i =0; i < 3; i++){
-//     let copyObj = listLi[i].cloneNode(true);
-//     list.append(copyObj); // ul맨뒤로 copyObj를 추가해라
-// }
+for(let i =0; i < 3; i++){
+    let copyObj = listLi[i].cloneNode(true);
+    list.append(copyObj); // ul맨뒤로 copyObj를 추가해라
+}
 
 let num = 0;
 document.querySelector('.next').addEventListener("click",function(e){
