@@ -74,23 +74,48 @@
     transform: rotate(45deg);
 }
 
-.box_left{
-    width: 100px;
-    height: 100px;
-    border: 1px solid #333;
+.beard_box{
     position: absolute;
-    left: 100px;
-    top: 300px;
+    top: 336px;
 }
-.box_left>div{
+
+.beard_box div{
+    display: block;
     width: 100px;
-    height: 100px;
-    border: 1px solid #333;
+    height: 4px;
+    background-color: #333;
     position: absolute;
     left: 100px;
     top: 30px;
 }
 
+.box_left{
+    left: -6px;
+}
+
+.box_left .l1{
+    transform: rotate(22deg);
+    top: -6px;
+}
+
+.box_left .l3{
+    transform: rotate(-22deg);
+    top: 65px;
+}
+
+.box_right{
+    right: 295px;
+}
+
+.box_right .r1{
+    transform: rotate(-22deg);
+    top: -6px;
+}
+
+.box_right .r3{
+    transform: rotate(22deg);
+    top: 65px;
+}
 </style>
 </head>
 <body>
@@ -101,12 +126,12 @@
             <div class="nose"></div>
             <div class="mouth left"></div> 
             <div class="mouth right"> </div>
-            <div class="box_left">
+            <div class="beard_box box_left">
                 <div class="l1"></div>
                 <div class="l2"></div>
                 <div class="l3"></div>
             </div>
-            <div class="box_right">
+            <div class="beard_box box_right">
                 <div class="r1"></div>
                 <div class="r2"></div>
                 <div class="r3"></div>
