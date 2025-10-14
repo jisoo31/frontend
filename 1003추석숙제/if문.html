@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 2;
+        let b = "8";
+        let c = -10;
+        let d = 8;
+
+        if(a > 0){
+            console.log("양수입니다");
+        }
+        if(a < 0){
+            console.log("음수입니다");
+        }
+
+        if(b == d){
+           console.log("같습니다"); 
+        }
+        if(b === d){
+           console.log("타입이 같습니다"); //출력되지 않음
+        }
+        if(a < d){
+            console.log("a가 d보다 작을 때 출력");
+        }
+        if(c != d){
+            console.log("다릅니다");
+        }
+
+        //if ~ else
+        if(b === d){
+           console.log("타입이 같습니다"); //출력되지 않음
+        }else{
+            console.log("타입이 다릅니다")
+        }
+
+        if(a >= b){
+            console.log("a가 b보다 크거나 같습니다");
+        }else{
+            console.log("a가 b보다 크거나 같지 않습니다")
+        }
+
+        if(c >= 0){
+            console.log("c는 양수입니다")
+        }else{
+            console.log("c는 음수입니다")
+        }
+
+        //if ~ else if ~ else
+        let score = 50;
+
+        if(score >= 90){
+            console.log("A등급")
+        }else if(score >= 70){
+            console.log("B등급")
+        }else{
+            console.log("F등급")
+        }
+
+    </script>
+</body>
+</html>

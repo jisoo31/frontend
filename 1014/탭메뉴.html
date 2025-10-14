@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+    /* 탭 버튼 */
+    .tab-buttons {
+      display: flex;
+      gap: 3px;
+    }
+    .tab-buttons .tab-link {
+      padding: 10px 20px;
+      cursor: pointer;
+      background: red;
+      transition: background 0.3s;
+      width: 100px;
+      height: 20px ;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+    }
+
+    .tab-buttons .tab-link.active {
+      background: #9a4337;
+      
+    }
+
+    /* 탭 내용 */
+    .tab-content {
+      display: none;
+      padding: 0px 20px 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: navy;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content h2{
+        color: black
+    }
+</style>
+
+</head>
+<body>
+    <div class="tab-buttons">
+        <div class="tab-link active" data-tab="tab1">menu1</div>
+        <div class="tab-link" data-tab="tab2">menu2</div>
+        <div class="tab-link" data-tab="tab3">menu3</div>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>menu1</h2>
+        01.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
+    </div>
+    <div id="tab2" class="tab-content">
+        <h2>menu2</h2>
+        02.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>menu3</h2>
+        03.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
+    </div>
+</body>
+</html>
+<script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabcontents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(function(button){
+        button.addEventListener('click', function(){
+            const targetId = button.getAttribute("data-tab");//tab1, tab2 tab3
+
+            //모든 버튼을 비활성
+            tabLinks.forEach(btn=> btn.classList.remove('active'));
+            //내용을 숨기기
+            tabcontents.forEach(content => content.classList.remove('active'));
+
+            //현재 클릭한 버튼(색상변경)과 내용 활성화
+            button.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+</script>

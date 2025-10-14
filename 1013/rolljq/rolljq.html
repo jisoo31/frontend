@@ -126,7 +126,7 @@ function autoPlay(){
 }
 
 $('#frame').mouseover(function(){
-    clearInterval(id);
+    clearInterval(id); //오토 멈추기
 });
 $('#frame').mouseout(function(){
     id = setInterval(autoPlay, 2000);
