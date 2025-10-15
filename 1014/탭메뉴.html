@@ -7,11 +7,11 @@
 <style>
     
     /* 탭 버튼 */
-    .tab-buttons {
+    #tab-buttons {
       display: flex;
       gap: 3px;
     }
-    .tab-buttons .tab-link {
+    #tab-buttons .tab-link {
       padding: 10px 20px;
       cursor: pointer;
       background: red;
@@ -23,7 +23,7 @@
       color: white;
     }
 
-    .tab-buttons .tab-link.active {
+    #tab-buttons .tab-link.active {
       background: #9a4337;
       
     }
@@ -47,7 +47,7 @@
 
 </head>
 <body>
-    <div class="tab-buttons">
+    <div id="tab-buttons">
         <div class="tab-link active" data-tab="tab1">menu1</div>
         <div class="tab-link" data-tab="tab2">menu2</div>
         <div class="tab-link" data-tab="tab3">menu3</div>

@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+    background-color: #252422;
+}
+
+dl{
+    width: 800px;
+    margin: 50px auto 0;
+}
+
+dt{
+    background: url(../img/a1.jpg) no-repeat 0 0;
+    color: white;
+    height: 35px;
+    text-indent: 54px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+dt.selected{
+    background: url(../img/a3.jpg) no-repeat 0 0;
+}
+
+dd{
+    margin: 0;
+    height: 320px;
+    background-color: #ccc;
+}
+
+dd p{
+    margin: 0;
+    padding: 20px;
+}
+
+dt.over{
+    background: url(../img/a2.jpg);
+    cursor: pointer;
+}

@@ -145,40 +145,7 @@ header .gnb{
   text-align: right;
 }
 
-/* 서브메뉴 전체 박스 */
-#submenu {
-  position: relative;
-  top: -30px;        /* 이미지에 걸치게 */
-  right: 380px;
-  display: flex;
-  width: 600px;
-  height: 80px;
-  margin-left: auto;
-  border-radius: 30px 0;
-  overflow: hidden;
-  font-size: 22px;
-  font-weight: bold;
-  z-index: 1000;
-  cursor: pointer;
-}
 
-#submenu .store {
-  background: url(../img/icon_map.png) no-repeat 80px, 0  #ffce32;
-  color: #333;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#submenu .franchise {
-  background: url(../img/icon_franchise.png) no-repeat 45px, 0 #009223;
-  color: #fff;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 

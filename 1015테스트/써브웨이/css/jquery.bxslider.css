@@ -43,7 +43,6 @@ ul.bxslider {
   bottom: 80px;
   width: 200px;
   right: 220px;
-  /* 페이저 위치 */
 }
 /* LOADER */
 .bx-wrapper .bx-loading {
@@ -79,7 +78,7 @@ ul.bxslider {
 
 .bx-wrapper .bx-pager.bx-default-pager a.active{
   width: 30px;
-  background: orange;
+  background: #ffce32;
 }
 .bx-wrapper .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {

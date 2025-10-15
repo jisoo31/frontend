@@ -1,0 +1,58 @@
+.tab {
+    width: 780px;
+    margin: 20px 0 20px;
+}
+
+.tab-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 2px;
+}
+
+.tab-menu li {  
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px ;
+    background-color: rgb(166, 112, 107);
+}
+
+.tab-menu li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.tab-menu li.on {
+    background-color: rgb(225, 2, 2);
+}
+
+.tab-menu li.on a {
+    color: rgb(233, 233, 2);
+}
+
+
+.tab-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.tab-list li {
+    display: none;
+    padding: 10px 30px 20px 20px;
+    color: rgb(10, 10, 180);
+}
+
+.tab-list li.on {
+    display: block;
+}
+
+.tab-list h2 {
+    margin-top: 0;
+    color: #000;
+}
