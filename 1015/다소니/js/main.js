@@ -35,7 +35,7 @@ $(function(){
         let sct = $(this).scrollTop();
 
         if(a1 <= sct + 700){
-            $('.s2-title img').addClass('slide');
+            $('.s2_title img').addClass('slide');
         }
         if(a2 < sct + 700){
             $('.s2_title h2').addClass('slide');
@@ -55,6 +55,48 @@ $(function(){
             setTimeout(function(){
                 $('.s2_table li').eq(3).addClass('slide');
             },900)
+        }
+    });
+
+
+
+     let b1 = $('.s3_title img').offset().top;
+    //이미지
+    let b2 = $('.s3_title h2').offset().top;
+    //제목
+    let b3 = $('.s3_title p').offset().top;
+    //내용
+    let b4 = $('.s3_table li').offset().top;
+    console.log(b1,b2,b3,b4);
+
+    $(window).scroll(function(){
+        let sct = $(this).scrollTop();
+
+        if(b1 <= sct + 700){
+            $('.s3_title img').addClass('slide');
+        }
+        if(b2 < sct + 700){
+            $('.s3_title h2').addClass('slide');
+        }
+        if(b3 < sct + 700){
+            $('.s3_title p').addClass('slide');
+        }
+
+        if(b4 < sct + 700){
+            $('.s3_table li').eq(0).addClass('slide');
+            setTimeout(function(){
+                $('.s3_table li').eq(1).addClass('slide');
+            },300)
+            setTimeout(function(){
+                $('.s3_table li').eq(2).addClass('slide');
+            },600)
+            setTimeout(function(){
+                $('.s3_table li').eq(3).addClass('slide');
+            },900)
+            setTimeout(function(){
+                $('.s3_table li').eq(4).addClass('slide');
+            },1200)
+            
         }
     });
 

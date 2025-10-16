@@ -165,6 +165,20 @@ header .gnb{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 섹션2 */ 
 
 #s2{
@@ -214,19 +228,19 @@ header .gnb{
 }
 
 .s2_table li:nth-child(1){
-    background: #fff url(../img/sec01_icon.png) no-repeat 50% 50%;
+    background: #fff url(../img/sec01_icon.png) no-repeat 50% 40%;
 }
 
 .s2_table li:nth-child(2){
-    background: #fff url(../img/sec01_icon2.png) no-repeat 50% 50%;
+    background: #fff url(../img/sec01_icon2.png) no-repeat 50% 40%;
 }
 
 .s2_table li:nth-child(3){
-    background: #fff url(../img/sec01_icon3.png) no-repeat 50% 50%;
+    background: #fff url(../img/sec01_icon3.png) no-repeat 50% 40%;
 }
 
 .s2_table li:nth-child(4){
-    background: #ff8f2b url(../img/sec01_icon4.png) no-repeat 50% 50%;
+    background: #ff8f2b url(../img/sec01_icon4.png) no-repeat 50% 40%;
 }
 
 .s2_apply{
@@ -287,4 +301,235 @@ header .gnb{
 .s2_table li.slide{
     visibility: visible;
     animation: slide 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 섹션3 */ 
+
+#s3{
+    height: 635px;
+    padding: 80px 0 40px;
+    background: url(../img/sec2_bg.jpg);
+    box-sizing: border-box;
+}
+
+.s3_title{
+    width: 1000px;
+    height: 180px;
+    text-align: center;
+    margin: 0 auto 80px;
+}
+
+.s3_title h2{
+    font-size: 48px;
+    color: #000;
+    margin-top: 20px;
+}
+
+.s3_title p{
+    font-size: 16.5px;
+    color: #000;
+    line-height: 30px;
+    margin: 30px 0 40px;
+}
+
+.s3_table{
+    width: 1000px;
+    height: 200px;
+    margin: 40px auto 0;
+    padding-left: 5px;
+    /* border: 3px solid #ff8f2b;   */
+}
+
+.s3_table li{
+    width: 195px;
+    margin-right: 5px;
+    height: 200px;
+    box-sizing: border-box;
+    float: left;
+    padding: 130px 0 0 0;
+    font-weight: bold;
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.s3_table li:hover{
+    border: 2px solid #000;
+}
+
+.s3_table li:nth-child(1){
+    background: #fff url(../img/sec02_icon.png) no-repeat 50% 35%;
+}
+
+.s3_table li:nth-child(2){
+    background:  #fff url(../img/sec02_icon2.png) no-repeat 50% 35%;
+}
+
+.s3_table li:nth-child(3){
+    background: #fff url(../img/sec02_icon3.png) no-repeat 50% 35%;
+}
+
+.s3_table li:nth-child(4){
+    background: #fff url(../img/sec02_icon4.png) no-repeat 50% 35%;
+}
+
+.s3_table li:nth-child(5){
+    background: #fff url(../img/sec02_icon5.png) no-repeat 50% 35%;
+}
+
+.s3_title img, .s3_title h2, .s3_title p{
+    visibility: hidden;
+}
+
+.s3_title img.slide, .s3_title h2.slide, .s3_title p.slide{
+    visibility: visible;
+    animation: slide 1s;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.s3_table li{
+    visibility: hidden;
+}
+.s3_table li.slide{
+    visibility: visible;
+    animation: slide 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 섹션4 */ 
+
+#s4{
+    height: 635px;
+    padding: 80px 0 40px;
+    background: url(../img/sec3_bg.jpg);
+    box-sizing: border-box;
+}
+
+.s4_title{
+    width: 1000px;
+    height: 180px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.s4_title h2{
+    font-size: 48px;
+    color: #65B07E;
+    margin-top: 20px;
+}
+
+.s4_title p{
+    font-size: 16.5px;
+    line-height: 30px;
+    margin: 30px 0 40px;
+}
+
+.s4_table{
+    width: 1000px;
+    height: 250px;
+    border-top: 3px solid #65B07E;
+    margin: 40px auto 0;
+}
+
+.s4_table li{
+    width: 247px;
+    margin-right: 3px;
+    height: 250px;
+    box-sizing: border-box;
+    float: left;
+    margin-top: 1px;
+    text-align: center;
+    padding: 30px;
+}
+
+.s4_table li:nth-child(1){
+    background: #fff url(../img/sec03_icon.png) no-repeat 50% 40%;
+}
+
+.s4_table li:nth-child(2){
+    background: #fff url(../img/sec03_icon2.png) no-repeat 50% 40%;
+}
+
+.s4_table li:nth-child(3){
+    background: #fff url(../img/sec03_icon3.png) no-repeat 50% 40%;
+}
+
+.s4_table li:nth-child(4){
+    background: #65B07E url(../img/sec03_icon4.png) no-repeat 50% 40%;
+}
+
+.s4_apply{
+    display: block;
+    width: 116px;
+    height: 35px;
+    color: #fff;
+    background: #65B07E;
+    border-radius: 17px;
+    text-align: center;
+    line-height: 35px;
+    margin: 110px auto 0;
+    transition: all 0.5s;
+    border: 1px solid #fff;
+}
+
+.s4_table li:nth-child(4) .s4_apply{
+    background: #fff;
+    border: 1px solid #65B07E;
+    color: #65B07E;
+}
+
+.s4_table li .s4_apply:hover{
+    background-color: #fff;
+    border: 1px solid #65B07E;
+    color: #65B07E;
+}
+
+.s4_table li:nth-child(4) .s4_apply:hover{
+    background-color: #65B07E;
+    border: 1px solid #fff;
+    color: #fff;
 }
