@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>버튼 클릭 시 count 증가</h1>
+    <div id="count">0</div>
+    <button id="btnp">+ 1 증가</button>
+    <button id="btnm">- 1 증가</button>
+    <script>
+        //카운트 변수 선언
+        let count = 0;
+
+        //요소선택
+        const countDisplay = document.getElementById("count");
+        const btnp = document.getElementById("btnp");
+        const btnm = document.getElementById("btnm");
+
+
+        //버튼 클릭 이벤트
+        btnp.addEventListener("click", () => {
+            count++; //count증가
+            countDisplay.textContent = count; //화면에표시
+        });
+        btnm.addEventListener("click", () => {
+            count--; //count증가
+            countDisplay.textContent = count; //화면에표시
+        });
+
+        var a = 1;
+        b = 2;
+        result = a+b;
+        document.write(result);
+
+    </script>
+</body>
+</html>
