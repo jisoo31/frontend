@@ -60,6 +60,10 @@ $(function(){
 
 
 
+
+
+
+
      let b1 = $('.s3_title img').offset().top;
     //이미지
     let b2 = $('.s3_title h2').offset().top;
@@ -100,5 +104,68 @@ $(function(){
         }
     });
 
+
+
+
+    let c1 = $('.s4_title img').offset().top;
+    //이미지
+    let c2 = $('.s4_title h2').offset().top;
+    //제목
+    let c3 = $('.s4_title p').offset().top;
+    //내용
+    let c4 = $('.s4_table li').offset().top;
+    console.log(c1,c2,c3,c4);
+
+    $(window).scroll(function(){
+        let sct = $(this).scrollTop();
+
+        if(c1 <= sct + 700){
+            $('.s4_title img').addClass('slide');
+        }
+        if(c2 < sct + 700){
+            $('.s4_title h2').addClass('slide');
+        }
+        if(c3 < sct + 700){
+            $('.s4_title p').addClass('slide');
+        }
+
+        if(c4 < sct + 700){
+            $('.s4_table li').eq(0).addClass('slide');
+            setTimeout(function(){
+                $('.s4_table li').eq(1).addClass('slide');
+            },300)
+            setTimeout(function(){
+                $('.s4_table li').eq(2).addClass('slide');
+            },600)
+            setTimeout(function(){
+                $('.s4_table li').eq(3).addClass('slide');
+            },900)
+        }
+    });    
+
+
+
+
+    let d1 = $('.s5_title').offset().top;
+    console.log(d1);
+
+    $(window).scroll(function(){
+        let sct = $(this).scrollTop();
+        if(d1 < sct + 700){
+            $('.s5_title').addClass('sslide');
+        }
+    });    
+
+
+
+    let e1 = $('#bigbox').offset().top;
+    console.log(e1);
+
+    $(window).scroll(function(){
+        let sct = $(this).scrollTop();
+        if(e1 < sct + 700){
+            $('#bigbox').addClass('sslide');
+        }
+    });  
 
 });

@@ -533,3 +533,293 @@ header .gnb{
     border: 1px solid #fff;
     color: #fff;
 }
+
+
+.s4_title img, .s4_title h2, .s4_title p{
+    visibility: hidden;
+}
+
+.s4_title img.slide, .s4_title h2.slide, .s4_title p.slide{
+    visibility: visible;
+    animation: slide 1s;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.s4_table li{
+    visibility: hidden;
+}
+.s4_table li.slide{
+    visibility: visible;
+    animation: slide 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 섹션5 */ 
+
+#s5{
+    height: 420px;
+    padding: 80px 0 0;
+    background: url(../img/sec4_bg.jpg);
+    box-sizing: border-box;
+}
+
+.s5_title{
+    width: 600px;
+    height: 180px;
+    text-align: center;
+    margin: 60px 200px;
+    margin-bottom: 80px;
+}
+
+.s5_title h2{
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+}
+
+.s5_title p{
+    font-size: 16.5px;
+    line-height: 16px;
+}
+
+.s5_apply{
+    display: block;
+    width: 116px;
+    height: 35px;
+    color: #fff;
+    background: #000;
+    border-radius: 17px;
+    text-align: center;
+    line-height: 35px;
+    margin: 50px auto 0;
+    transition: all 0.5s;
+    border: 1px solid #fff;
+}
+
+.s5_apply:hover{
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+
+
+.s5_title{
+    visibility: hidden;
+}
+
+.s5_title.sslide{
+    visibility: visible;
+    animation: sslide 1s;
+}
+
+@keyframes sslide {
+    0%{
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+/* 섹션6 */ 
+
+
+#s6{
+    height: 420px;
+    /* background-color: #ccc; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#bigbox{
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    /* border: 3px solid red; */
+}
+.box{
+    width: 490px;
+    height: 100%;
+    /* border: 1px solid blue; */
+    float: left;
+    margin-left: 5px;
+}
+.box1 > ul > li > a{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 20px 0;
+    display: block;
+    margin-bottom: 40px;
+    color: #65B07E;
+    background: url(../img/sec5_tit.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+.box2 > ul > li > a{
+    font-size: 21px;
+    font-weight: bold;
+    margin: 20px 0 30px 20px;
+    display: block;
+    margin-bottom: 40px;
+    color: #ff8f2b;
+    background :  url(../img/sec5_tit2.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+#bigbox li{
+    width: 490px;
+    height: 40px;
+    box-sizing: border-box;
+    float: left;
+    display: block;
+    font-size: 14px;
+}
+
+.box2 > ul > li > ul> li{
+    margin-left: 20px;
+}
+
+
+.box > ul > li > ul> li> a:hover{
+    text-decoration: underline; 
+
+}
+
+.box ul li{
+    position: relative;
+    padding-right: 90px;
+    
+}
+
+.box ul li .plus{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transition: transform 0.4s ease;
+}
+
+.box ul li .plus:hover{
+    transform: rotate(180deg);
+}
+
+.box ul li ul li{
+  position: relative;
+  padding-right: 90px;
+}
+
+.box1 ul li ul li .date{
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.box2 ul li ul li .date{
+  position: absolute;
+  right: 30px;
+  top: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+
+
+#bigbox{
+    visibility: hidden;
+}
+
+#bigbox.sslide{
+    visibility: visible;
+    animation: sslide 1s;
+}
+
+@keyframes sslide {
+    0%{
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 260px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.f_logo{
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+}
+
+.text{
+    width: 500px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #fff;
+    margin-right: 50px;
+}
+
+.sns{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sns img{
+    cursor: pointer;
+    margin-right: 20px;
+}
