@@ -84,5 +84,5 @@ ul{list-style: none;}
 /* 호버 시 서브메뉴 보이기 */
 .gnb:hover .sub-menu{
     opacity: 1;
-    visibility: hidden;
+    visibility: visible;
 }
