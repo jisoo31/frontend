@@ -1,9 +1,24 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
-export default function User({user}) {
+export default function User({user, onRemove, onToggle}) {
+  useEffect(()=>{
+  console.log('user 값이 설정됨');
+  console.log(user);
+  return () => {
+    console.log('user가 바뀌기 전')
+
+  }
+},[])
   return (
     <div>
-        <b>{user.username}</b><span>({user.email})</span>
+        <b style={{
+          cursor: 'pointer',
+          color:user.active ? 'green' :'black'
+        }} onClick={() => onToggle(user.id)}>
+          {user.username}</b>
+        
+        <span>({user.email})</span>
+        <button onClick={()=> onRemove(user.id)}>삭제</button>
     </div>
   )
 }

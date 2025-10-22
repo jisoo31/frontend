@@ -69,15 +69,23 @@ const [inputs, setInputs] = useState({
       //2. 기존의 users 배열을 순하여 새로운 배열 생성
       users.map(user =>
         //3. 현재 순회중인 user.id 가 전달받은 id가 일치하는지 확인
-        user.id === id ? {...user, active: !user.active } : user
+        user.id ===id ? {...user, active : !user.active } : user
      )
     )
   }
+   //일치하면(O) 해당 user 객체의 active 속성만 토글하여 새로운 객체를 생성 
+    //일치하지 않으면(X) 해당 user객체는 그대로 반환
+    //  active : !user.active   -> active 값을 반대로 뒤집기 true -> false 로 false -> true
+
+  // 👇 이 부분이 새로 추가된 테스트용 state입니다.
+  const [visible, setVisible] = useState(true);
 
 
   return (
     <div>
-
+      <button onClick={() => setVisible(!visible)}>
+        {visible ? 'UserList 숨기기' : 'UserList 보이기'}
+      </button>
 
        <CreateUser
         username={username}
@@ -87,7 +95,10 @@ const [inputs, setInputs] = useState({
         //함수전달
       />
 
-      <UserList2 users={users} onRemove={onRemove} onToggle={onToggle} />
+      {/* <UserLIst2 users={users} onRemove={onRemove} onToggle={onToggle} /> */}
+     {visible && (
+        <UserList2 users={users} onRemove={onRemove} onToggle={onToggle} />
+      )}
     </div>
   )
 }
