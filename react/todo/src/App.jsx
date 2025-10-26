@@ -43,11 +43,30 @@ export default function App() {
     idRef.current += 1
  };
 
+ const onUpdate = (targetId) => {
+  //targetId는 클릭 된 Todo 고유 id로 전달
+  setTodo(todo.map((it) => {
+    // if(it.id === targetId){ //순회 기존 it.id와 targetId 같은지 확인
+      // return {...it, //전개연산 기존 다른 속성 (content, date, createdDate) 등은 유지
+        // isDone:!it.isDone} //isDone 값을 반전(false -> true, true -> false)
+    // }else{
+      // return it;
+    // }
+    return  it.id === targetId ? {...it, isDone : !it.isDone} : it
+    //{id:1 content:"빨래하기", isDone:false} //기존
+    //{id:1 content:"빨래하기", isDone:false} //update 실행 후 
+  }))
+ }
+
+const onDelete = (targetId) => {
+  setTodo(todo.filter((it) => it.id !== targetId));
+};
+
   return (
     <div className='App'>
       <Header />    
       <TodoEditor onCreate = {onCreate}/> 
-      <TodoList todo={todo}/>  
+      <TodoList todo={todo} onUpdate = {onUpdate} onDelete = {onDelete}/>  
     </div>
   )
 }
