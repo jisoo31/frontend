@@ -79,17 +79,156 @@ useEffect(()=>{
         </div>
       </section>
 
+
+      {/* About */}
       <section ref={aboutRef} className='section section-about'>
-        <div className="section-content">
-          <h2 className='slide-in-left'>About us</h2>
-          <p className='slide-in-left'>스크롤 할 때마다 부드러운 효과가 적용됩니다.</p>
-          <div className="cards">
-            <div className="card card-fade">Card1</div>
-            <div className="card card-fade">Card2</div>
-            <div className="card card-fade">Card3</div>
+        <div className='aboutsec'>
+
+          <div className='leftsec'>
+            <div className='leftinnersec'>
+              <p className='b-name'>YOO JISOO</p>
+              <div className='photo'></div>
+              <div className='personalinfo'>
+                Name : 유지수 <br/>
+                Birth : 2000.10.31 <br/>
+                Phone Number : 010-9092-9253<br/>
+                E-mail : jisooworkpla@gmail.com
+              </div>
+            </div>
+            <div className='leftsec-dia'>✦</div>
           </div>
+
+          <div className="rightsec">
+            <div className="topsec">
+              <div className='curclebox1'>
+                <p className='dia1'></p>
+                <div className='curcle1'>
+                  <h3>소통</h3>
+                </div>
+              </div>
+              <div className='curclebox2'>
+                <p className='dia2'></p>
+                <div className='curcle2'>
+                  <h3>성장</h3>
+                </div>
+              </div>
+              <div className='curclebox3'>
+                <p className='dia3'></p>
+                <div className='curcle3'>
+                  <h3>협력</h3>
+                </div>
+              </div>
+              <div className='curclebox4'>
+                <p className='dia4'></p>
+                <div className='curcle4'>
+                  <h3>공감</h3>
+                </div>
+              </div>
+            </div>
+            <div className='bottomsec'>
+              <div className='edu'>
+                  <h2>학력사항</h2>
+                  <hr/>
+                  <ul class="edu-list">
+                    <li>
+                      <span class="edu-date">2016.03.02 ~ 2019.01.02</span>
+                      <span class="edu-desc">당진 고등학교 졸업</span>
+                    </li>
+                    <li>
+                      <span class="edu-date">2019.03.04 ~ 2024.02.22</span>
+                      <span class="edu-desc">호원 대학교 항공관광학과 졸업</span>
+                    </li>
+                    <li>
+                      <span class="edu-date">2024.07.08 ~ 2025.06.20</span>
+                      <span class="edu-desc">휴먼 아카데미 일본어학교 오사카교 수료</span>
+                    </li>
+                  </ul>
+              </div>
+              <div className='career'>
+                    <h2>경력사항</h2>
+                    <hr/>
+                    <ul class="career-list">
+                      <li>
+                        <span class="career-date">2023.05.15 ~ 2023.10.31</span>
+                        <span class="career-desc">JW Marriott Seoul F&B소속 근무</span>
+                      </li>
+                      <li>
+                        <span class="career-date">2023.12.21 ~ 2024.05.31</span>
+                        <span class="career-desc">유베이스 라이나원 Qa팀 근무</span>
+                      </li>
+                    </ul>
+              </div>
+              <div className='license'>
+                  <h2>자격사항</h2>
+                  <hr/>
+                  <ul class="license-list">
+                    <li>
+                      <span class="license-date">2025.08.12</span>
+                      <span class="license-desc">JLPT N2 취득</span>
+                    </li>
+                  </ul>
+              </div>
+              <div className='skill'>
+                  <h2>보유 스킬</h2>
+                  <hr/>
+                  <ul class="skill-list">
+                    <li>
+                      <span class="skill-desc">HTML5</span>
+                        <div class="diamonds">
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="blue">✦</span>
+                        </div>
+                    </li>
+                    <li>
+                      <span class="skill-desc">CSS3</span>
+                      <div class="diamonds">
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="blue">✦</span>
+                        </div>
+                    </li>
+                    <li>
+                      <span class="skill-desc">Bootstrap</span>
+                      <div class="diamonds">
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="blue">✦</span>
+                        </div>
+                    </li>
+                    <li>
+                      <span class="skill-desc">React</span>
+                      <div class="diamonds">
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="red">✦</span>
+                          <span class="blue">✦</span>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
+
+      {/* About end */}
 
       <section ref={servicesRef} className='section section-services'>
         <div className="section-content">

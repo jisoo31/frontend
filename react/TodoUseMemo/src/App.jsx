@@ -3,6 +3,7 @@ import './App.css';
 import Header from './component/Header';
 import TodoEditor from './component/TodoEditor';
 import TodoList from './component/TodoList';
+import { useCallback } from 'react';
 
 //useReducer란?
 //리액트에서 간단한 상태관리 = useState
@@ -88,13 +89,12 @@ export default function App() {
     idRef.current += 1
  };
 
- const onUpdate = (targetId) => {
+ const onUpdate = useCallback((targetId) => {
   dispatch({type:"UPDATE", targetId});
- }
-
-const onDelete = (targetId) => {
-  dispatch({type:"DELETE", targetId});
- };
+ },[]);
+const onDelete = useCallback((targetId) => {
+  dispatch({type:"UPDATE", targetId});
+ },[]);
 
   return (
     <div className='App'>
