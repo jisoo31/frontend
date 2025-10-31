@@ -90,8 +90,8 @@ useEffect(()=>{
               <div className='photo'></div>
               <div className='personalinfo'>
                 Name : 유지수 <br/>
-                Birth : 2000.10.31 <br/>
-                Phone Number : 010-9092-9253<br/>
+                Birth : 2000. 10. 31 (만 25세) <br/>
+                Phone : 010-9092-9253<br/>
                 E-mail : jisooworkpla@gmail.com
               </div>
             </div>
