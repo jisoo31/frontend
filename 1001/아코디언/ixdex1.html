@@ -79,4 +79,20 @@
 
     });
 
+
+    $('.mobile_nav > ul > li > a').click(function(e){
+        var $sub = $(this).next('.sub');
+        if ($sub.length) { // 하위 메뉴가 있으면
+            e.preventDefault(); // 링크 이동 막기
+
+            if ($sub.is(':visible')) {
+                $sub.slideUp(200); // 이미 열려 있으면 닫기
+            } else {
+                // 다른 열린 서브 메뉴 닫기
+                $(this).parent().siblings().find('.sub:visible').slideUp(200);
+                $sub.slideDown(250); // 현재 클릭한 서브 메뉴 열기
+            }
+        }
+    });
+
 </script>
