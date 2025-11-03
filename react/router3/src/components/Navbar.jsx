@@ -1,31 +1,22 @@
-import React from 'react'
-import { useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
-import './navbar.css'
+import React from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
+import "./navbar.css";
 
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //isMenuOpen : 모바일 메뉴가 열려 있는지여부(true - 열림, false - 닫힘)
+  //setIsMenuOpen 메뉴 상태를 바꿈
 
-export default function Navbar({activeSection}) {
-    const[isMenuOpen, setIsMenuOpen] = useState(false);
-    // isMenuOpen : 모바일 메뉴가 열려 있는지 여부 (true - 열림, false - 닫힘)
-    // setIsMenuOpen 메뉴 상태를 바꿈
-
-
-    // 네베게이션 항목 목록
-    const navItems = [
-      { id: 'home', label: 'Home' },
-      { id: 'about', label: 'About' },
-      { id: 'skills', label: 'Skills' },
-      { id: 'projects', label: 'Projects' },
-      { id: 'contact', label: 'Contact' }
-    ]
-
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId)
-        if(element){
-            element.scrollIntoView({behavior: "smooth"});
-        }
-        setIsMenuOpen(false);
-    };
+  //네비게이션 항목 목록
+  const navItems = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/skills", label: "Skills" },
+    { to: "/projects", label: "Projects" },
+    { to: "/contact", label: "Contact" },
+  ];
 
   return (
     <nav className="navbar">
@@ -38,13 +29,14 @@ export default function Navbar({activeSection}) {
           {/* Desktop Navigation */}
           <div className="desktop-nav">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`nav-button ${activeSection === item.id ? 'active' : ''}`}
+              <NavLink
+                key={item.to}
+                to={item.to}
+                onClick={() => setIsMenuOpen(false)}
+                className={({ isActive }) => `nav-button ${isActive ? "active" : ""}`}
               >
                 {item.label}
-              </button>
+              </NavLink>
             ))}
           </div>
 
@@ -63,18 +55,19 @@ export default function Navbar({activeSection}) {
           <div className="mobile-nav">
             <div className="mobile-nav-items">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`mobile-nav-button ${activeSection === item.id ? 'active' : ''}`}
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={({ isActive }) => `mobile-nav-button ${isActive ? "active" : ""}`}
                 >
                   {item.label}
-                </button>
+                </NavLink>
               ))}
             </div>
           </div>
         )}
       </div>
     </nav>
-  )
+  );
 }

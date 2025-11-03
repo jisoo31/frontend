@@ -1,31 +1,29 @@
-import React from 'react'
-import { useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
-import './navbar.css'
+import React from "react";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import "./navbar.css";
 
+export default function Navbar({ activeSection }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //isMenuOpen : 모바일 메뉴가 열려 있는지여부(true - 열림, false - 닫힘)
+  //setIsMenuOpen 메뉴 상태를 바꿈
 
-export default function Navbar({activeSection}) {
-    const[isMenuOpen, setIsMenuOpen] = useState(false);
-    // isMenuOpen : 모바일 메뉴가 열려 있는지 여부 (true - 열림, false - 닫힘)
-    // setIsMenuOpen 메뉴 상태를 바꿈
-
-
-    // 네베게이션 항목 목록
-    const navItems = [
-      { id: 'home', label: 'Home' },
-      { id: 'about', label: 'About' },
-      { id: 'skills', label: 'Skills' },
-      { id: 'projects', label: 'Projects' },
-      { id: 'contact', label: 'Contact' }
-    ]
-
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId)
-        if(element){
-            element.scrollIntoView({behavior: "smooth"});
-        }
-        setIsMenuOpen(false);
-    };
+  //네비게이션 항목 목록
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
+  // id값을 받아와서 스크롤
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -41,7 +39,9 @@ export default function Navbar({activeSection}) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-button ${activeSection === item.id ? 'active' : ''}`}
+                className={`nav-button ${
+                  activeSection === item.id ? "active" : ""
+                }`}
               >
                 {item.label}
               </button>
@@ -66,7 +66,9 @@ export default function Navbar({activeSection}) {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`mobile-nav-button ${activeSection === item.id ? 'active' : ''}`}
+                  className={`mobile-nav-button ${
+                    activeSection === item.id ? "active" : ""
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -76,5 +78,5 @@ export default function Navbar({activeSection}) {
         )}
       </div>
     </nav>
-  )
+  );
 }

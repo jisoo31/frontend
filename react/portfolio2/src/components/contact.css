@@ -19,7 +19,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
 .contact-info-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -89,7 +88,6 @@
 .contact-detail-item p {
   color: #9ca3af;
 }
-
 .social-title {
   font-weight: 600;
   margin-bottom: 1rem;

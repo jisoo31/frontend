@@ -24,50 +24,44 @@
   }
 }
 
-.skill-category-card{
-    background: black;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid #1a1a1a;
-    transition: all 0.3s;
+.skill-category-card {
+  background: black;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1a1a1a;
+  transition: all 0.3s;
+}
+.skill-category-card:hover {
+  border-color: #a855f7;
 }
 
-.skill-category-card:hover{
-    border-color: #a855f7;
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
-
-.category-title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center;
+.skills-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
-
-.skills-grid-inner{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #111827;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
 }
-
-.skill-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background: #111827;
-    border-radius: 0.5rem;
-    transition: all 0.3s;
+.skill-item:hover {
+  transform: scale(1.1);
 }
-
-.skill-item:hover{
-    transform: scale(1.1);
+.skill-icon {
+  font-size: 1.875rem;
+  margin-bottom: 0.5rem;
 }
-
-.skill-icon{
-    font-size: 1.875rem;
-    margin-bottom: 0.5rem;
-}
-
 .skill-orange {
   color: #f97316;
 }
@@ -119,55 +113,48 @@
 .skill-lightgray {
   color: #9ca3af;
 }
-
 .skill-name {
   font-size: 0.75rem;
   color: #9ca3af;
   text-align: center;
 }
 
-/* 프로그래스 바 */
-.skills-bars{
+/* 프로그래스바 */
+.skills-bars {
   margin-top: 2rem;
 }
-
-.skills-bars-title{
+.skills-bars-title {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
-
-.skill-bar-container{
+.skill-bar-container {
   margin-bottom: 1.5rem;
 }
-
-.skills-bar-header{
+.skill-bar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
 }
-
-.skill-bar-label{
+.skill-bar-label {
   font-weight: 500;
   color: #d1d5db;
 }
 
-.skill-bar-value{
+.skill-bar-value {
   color: #a855f7;
   font-weight: bold;
 }
-
-.skill-bar-track{
+.skill-bar-track {
   width: 100%;
   background: #1f2937;
   border-radius: 9999px;
   height: 0.75rem;
   overflow: hidden;
 }
-
-.skill-bar-fill{
+.skill-bar-fill {
   height: 0.75rem;
   background: linear-gradient(to right, #a855f7, #3b82f6);
   border-radius: 9999px;

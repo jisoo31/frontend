@@ -100,27 +100,27 @@ useEffect(()=>{
 
           <div className="rightsec">
             <div className="topsec">
-              <div className='curclebox1'>
-                <p className='dia1'></p>
-                <div className='curcle1'>
+              <div className='circlebox'>
+                <p className='cdia'>✦</p>
+                <div className='circle'>
                   <h3>소통</h3>
                 </div>
               </div>
-              <div className='curclebox2'>
-                <p className='dia2'></p>
-                <div className='curcle2'>
+              <div className='circlebox'>
+                <p className='cdia'>✦</p>
+                <div className='circle'>
                   <h3>성장</h3>
                 </div>
               </div>
-              <div className='curclebox3'>
-                <p className='dia3'></p>
-                <div className='curcle3'>
+              <div className='circlebox'>
+                <p className='cdia'>✦</p>
+                <div className='circle'>
                   <h3>협력</h3>
                 </div>
               </div>
-              <div className='curclebox4'>
-                <p className='dia4'></p>
-                <div className='curcle4'>
+              <div className='circlebox'>
+                <p className='cdia'>✦</p>
+                <div className='circle'>
                   <h3>공감</h3>
                 </div>
               </div>

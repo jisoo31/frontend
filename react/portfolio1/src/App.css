@@ -175,6 +175,23 @@ html, body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* About */
 .section-about {
   margin: 0;
@@ -205,16 +222,16 @@ html, body {
   left: 50%;
   transform: translateX(-50%); /* 가운데 정렬 */
   width: 70%;
-  height: 85%; /* 필요에 따라 높이 조정 */
-  background: linear-gradient(to bottom, rgba(250, 246, 213, 0) 0%, rgba(250, 246, 213, 1) 25%);
-  border-radius: 0 0 230px 230px;
+  height: 80%; /* 필요에 따라 높이 조정 */
+  background-color: #faf6d5;
+  border-radius: 0 0 250px 250px;
 }
 
 .leftsec-dia{
   font-size: 50px;
   color: #faf6d5;
   position:absolute;
-  bottom: 70px;
+  bottom: 100px;
 }
 
 .b-name{
@@ -256,7 +273,7 @@ html, body {
   background-color: #faf6d5; /* 부드러운 버터색 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 3rem;
   color: #333;
   margin: 0;
@@ -267,6 +284,45 @@ html, body {
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.rightsec .topsec{
+  width: 80%;
+  height: 180px;
+  border: 1px solid hotpink;
+  margin: 70px auto 0 auto !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.circlebox{
+  width: 180px;
+  height: 100%;
+  border: 1px solid slateblue;
+  float: left;
+  position: relative;;
+}
+
+.cdia{
+  position: absolute;
+  font-size: 40px;
+  display: flex;
+  left: 70px;
+  justify-content: center;
+  margin-top: -10px;
+  color: #77a3b9;
+  padding: 0 5px 5px 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.circle{
+  position: absolute;
+  border: 4px solid #77a3b9;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
 }
 
 

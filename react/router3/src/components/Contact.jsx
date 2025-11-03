@@ -1,31 +1,54 @@
-import React from 'react'
-import { useState } from 'react'
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
-import './contact.css'
+import React from "react";
+import { useState } from "react";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase";
+import "./contact.css";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Firebase Firestore에 데이터 저장
+      await addDoc(collection(db, "contacts"), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: serverTimestamp(),
+      });
+
+      // 성공 메시지
+      setSubmitStatus("success");
+      alert("Thank you for your message! Your message has been saved.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      // 에러 처리
+      console.error("Error saving contact:", error);
+      setSubmitStatus("error");
+      alert("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
-
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        console.log("Form submitted", formData);
-        alert("Thank you for your message!");
-        setFormData({name: "", email: "", message: ""});
-        //폼초기화
-    };
-
-    const handleChange = (e) =>{
-        setFormData({
-            ...formData,
-            [e.target.name] : e.target.value
-        });
-    };
-
+  };
 
   return (
     <section id="contact" className="contact-section">
@@ -36,7 +59,8 @@ export default function Contact() {
           </h2>
           <div className="section-divider"></div>
           <p className="section-subtitle">
-            Feel free to reach out if you want to collaborate or just want to chat
+            Feel free to reach out if you want to collaborate or just want to
+            chat
           </p>
         </div>
 
@@ -47,7 +71,8 @@ export default function Contact() {
               <h3 className="contact-info-title">Let's Talk</h3>
               <p className="contact-info-text">
                 I'm always open to discussing new projects, creative ideas, or
-                opportunities to be part of your visions. Feel free to get in touch.
+                opportunities to be part of your visions. Feel free to get in
+                touch.
               </p>
             </div>
 
@@ -90,13 +115,28 @@ export default function Contact() {
             <div className="social-media">
               <h4 className="social-title">Follow Me</h4>
               <div className="social-links">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
                   <FaLinkedin />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
                   <FaGithub />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
                   <FaTwitter />
                 </a>
               </div>
@@ -145,9 +185,23 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-button">
-                Send Message
+              <button 
+                type="submit" 
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
+              {submitStatus === "success" && (
+                <p style={{ color: "#10b981", textAlign: "center" }}>
+                  Message sent successfully!
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p style={{ color: "#ef4444", textAlign: "center" }}>
+                  Failed to send message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>
@@ -158,5 +212,5 @@ export default function Contact() {
         <p>&copy; 2024 Your Name. All rights reserved.</p>
       </footer>
     </section>
-  )
+  );
 }
