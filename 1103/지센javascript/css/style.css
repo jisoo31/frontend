@@ -55,7 +55,7 @@ img {
 }
 
 .mobile_tab {
-  /* display: none; */
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -104,7 +104,12 @@ img {
   color: #b4252d;
 }
 .mobile_nav .sub {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.mobile_nav .sub.active {
+  max-height: 500px;
 }
 
 .mobile_nav .sub > li {

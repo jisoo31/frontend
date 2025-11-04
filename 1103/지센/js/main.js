@@ -1,26 +1,53 @@
 $(function(){
-    $('.mobile_tab').click(function(e){
-        e.preventDefault();
-        var $menu = $('.mobile_nav');
+    $(window).resize(function (){
+        var w = $(this).width();
+        console.log(w);
+    
 
-        if ($menu.hasClass('active')) {
-            $menu.removeClass('active');
-        } else {
-            $menu.addClass('active');
+    if (w <= 850){
+    }else{
+        if($('.mobile_nav').hasClass('active')){
+            $('.mobile_nav').removeClass('active');
+            $('.transparency').removeClass('active');
+            $('.container').removeClass('active');
+            $('.mobile_nav .sub').css('display','none');
         }
+    }
+});
+
+    $(window).trigger('resize');
+    //컴퓨터가 브라우저 켜자마자 한번 resize 실행
+
+    $('.nav ul').hover(function(){
+        $(this).addClass('over')
+    },function(){
+        $(this).removeClass('over')
+    })
+
+
+    $('.mobile_tab').click(function(){
+        $('.mobile_nav').addClass('active');
+        $('.transparency').addClass('active');
+        $('.container').addClass('active');
     });
 
 
-    $('.mobile_nav > ul > li > a').click(function(e){
-        var $sub = $(this).next('.sub');
-        if ($sub.length) {
-            e.preventDefault();
-            if ($sub.is(':visible')) {
-                $sub.slideUp(300);
-            } else {
-                $(this).parent().siblings().find('.sub:visible').slideUp(300);
-                $sub.slideDown(300);
-            }
-        }
+    $('.transparency').click(function(){
+        $('.mobile_nav').removeClass('active');
+        $('.transparency').removeClass('active');
+        $('.container').removeClass('active');
+        $('.mobile_nav .sub').css('display','none');
     });
+
+    $('.mobile_nav > ul > li > a').click(function(){
+        var k = $(this).next('.sub').css('display');
+        if(k == 'none'){
+            $('.mobile_nav .sub').slideUp(300);
+            $(this).next('.sub').slideDown(300);
+        }else{
+            $(this).next('.sub').slideUp(300);
+        }
+
+        return false;
+    })
 });
