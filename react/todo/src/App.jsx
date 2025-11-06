@@ -34,7 +34,7 @@ export default function App() {
 
  const onCreate = (content) => {
   const newItem ={
-    id: idRef.crurrnt,
+    id: idRef.current,
     content,
     isDone : false,
     createdDate: new Date().getTime(),
